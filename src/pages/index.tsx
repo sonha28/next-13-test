@@ -13,11 +13,13 @@ export default function Home() {
             <div className="h-full">
                 <h1>Page 1</h1>
                 <button
-                    onClick={() =>
-                        router.push({
-                            pathname: "/next-page",
-                            query: { success: false },
-                        })
+                    onClick={
+                        () =>
+                            (window.location.href = "/next-page?success=false")
+                        // router.push({
+                        //     pathname: "/next-page",
+                        //     query: { success: false },
+                        // })
                     }
                 >
                     Go Next Page
